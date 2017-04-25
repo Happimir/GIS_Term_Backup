@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+        <script src="netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.src.js"></script>
+        <meta charset="UTF-8">
+        <link rel = "stylesheet" type="text/css" href="../css/index.css">
+        <script src="../javascript/actions.js"></script>
+
+        <title>GIS Term Project</title>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">4Musketeers</a>
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse" id="myNav">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#submission">Data Form</a></li>
+                            <li><a href="#tweet">Tweet Results</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- main container -->
+        <div class="container" style="width: 100%" >
+
+            <div id="jumbo" class="jumbotron" style="text-align: center">
+                <h1>Twitter Sentiment Analysis Prototype</h1>
+                <h1>Team Members</h1>
+                <div class="center-block">
+                    <img src="../images/matt.jpg" class="img-circle" alt="matt" width="250" height="250" title="Matt Butcher">
+                    <img src="../images/michael.jpg" class="img-circle " alt="michael kovalsky - Lead Developer" width="250" height="250" title="Michael Kovalsky">
+                    <img src="../images/veronica.jpg" class="img-circle " alt="veronica" width="250" height="250" title="Veronica McManus">
+                    <img src="../images/michaelSmith.png" class="img-circle " alt="michael smith" width="250" height="250" title="Michael Smith">
+                </div>
+            </div>
+
+            <div id="jumboOne" class="jumbotron" style="text-align: center;">
+                <h1>GIS Term Project</h1>
+            </div>
+
+            <form  method="GET" id="submission">
+                <div class="form-group">
+                    <label for="region">Region</label>
+                    <input type="search" class="form-control" id="region" name="region" placeholder="South">
+                </div>
+
+                 <div class="form-group">
+                    <label for="hashtag">Hashtag</label>
+                    <input type="search" class="form-control" id="hashtag" name="hashtag" placeholder="#godawgs">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="search" class="form-control" id="category" name="category" placeholder="Politics, Sports, Entertainment, Animals">
+                </div>
+
+
+
+                <div class="form-group" style="display:none;">
+                    <label for="hidden">Extra:</label>
+                    <input type="text" class="form-control" id="hidden" name="maxResults" placeholder="0 to 50">
+                </div>
+                <button type="submit" id="submitButton" value="Submit" onclick="buttonClick()">Submit</button>
+            </form>
+
+            <hr>
+            <div class="row" id="Sentiment-Analysis" style="width: 100%; height: 500px;">
+                <div id="left-graph" class="col-lg-6" style="width: 50%; height: 500px" >
+
+                </div>
+                <div id="right-graph" class="col-lg-6" style="width: 50%; height: 500px">
+
+                </div>
+            </div>
+            <hr>
+            <h1 style="text-align: center">Tweet Results</h1>
+            <div style="width: 100%;height: 100%; padding: 5%" id="tweets">
+                
+            </div>
+
+        </div>
+    </body>
+</html>

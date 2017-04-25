@@ -1,0 +1,18 @@
+{
+  "name": "gis_term",
+  "version": "1.0.0",
+  "description": "GIS Term Project",
+  "main": "sentiment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Kovalsky",
+  "license": "ISC",
+  "dependencies": {
+    "async": "~2.3.0",
+    "ml-sentiment": "^2.0.7",
+    "mysql": "~2.13.0",
+    "twit": "~2.2.5",
+    "watson-developer-cloud": "^2.29.0"
+  }
+}
