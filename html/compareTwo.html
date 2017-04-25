@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type="text/css" href="../css/index.css">
+    <script src="../javascript/actionsTwo.js"></script>
+
+    <title>Compare Two</title>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">4Musketeers</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNav">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#submission_one">Data Form</a></li>
+                        <li><a href="#tweets">Tweet Results</a></li>
+                        <li><a href="dynamics.html">Dynamic Results</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container" style="width: 100%" >
+
+        <div id="jumbo" class="jumbotron" style="text-align: center;">
+
+            <h1>GIS Term Project</h1>
+            <h2>Compare Two</h2>
+
+        </div>
+
+        <div class="formRow" id="formRow" style="width: 100%; height: 300px">
+
+            <div id="left-form" class="col-lg-6" style="width: 50%; height: 300px" >
+                <form method="GET" id="submission_one">
+                    <div class="form-group">
+                        <label for="region_one">Region</label>
+                        <input type="search" class="form-control" id="region_one" name="region_one" placeholder="South">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hashtag_one">Hashtag</label>
+                        <input type="search" class="form-control" id="hashtag_one" name="hashtag_one" placeholder="#godawgs">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category_one">Category</label>
+                        <input type="search" class="form-control" id="category_one" name="category_one" placeholder="Politics, Sports, Entertainment, Animals">
+                    </div>
+                </form>
+            </div>
+            <div id="right-form" class="col-lg-6" style="width: 50%; height: 300px">
+                <form method="GET" id="submission_two">
+                    <div class="form-group">
+                        <label for="region_two">Region</label>
+                        <input type="search" class="form-control" id="region_two" name="region_two" placeholder="South">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hashtag_two">Hashtag</label>
+                        <input type="search" class="form-control" id="hashtag_two" name="hashtag_two" placeholder="#godawgs">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category_two">Category</label>
+                        <input type="search" class="form-control" id="category_two" name="category_two" placeholder="Politics, Sports, Entertainment, Animals">
+                    </div>
+                </form>
+                <button type="submit" id="submitButton" value="Submit" onclick="sendData()">Submit</button>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row" id="Sentiment-Analysis" style="width: 100%; height: 1000px">
+
+            <div id="left-graph_one" class="col-lg-6" style="width: 50%; height: 500px">
+
+            </div>
+            <div id="right-graph_one" class="col-lg-6" style="width: 50%; height: 500px">
+
+            </div>
+            <div id="left-graph_two" class="col-lg-6" style="width: 50%; height: 500px">
+
+            </div>
+            <div id="right-graph_two" class="col-lg-6" style="width: 50%; height: 500px">
+
+            </div>
+        </div>
+
+        <hr>
+        <h1 style="text-align: center">Tweet Results</h1>
+        <div style="width: 100%;height: 100%; padding: 5%" id="tweets">
+            <div id="left-tweets" class="col-lg-6" style="width: 50%; height: 1000px" >
+
+            </div>
+            <div id="right-tweets" class="col-lg-6" style="width: 50%; height: 1000px">
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

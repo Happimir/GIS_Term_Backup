@@ -76,12 +76,6 @@ function sendData() {
                 negativeAvg = negativeAvg/(negativeArray.length);
                 neutralAvg = negativeAvg/(neutralArray.length);
 
-                // var type = (result[1]);
-                // //console.log(result[1]['Neutral'].score);
-                // console.log("type: " + type);
-
-                // $("#Sentiment-Analysis").html(result);
-
             })
     ).then(function () {
 
