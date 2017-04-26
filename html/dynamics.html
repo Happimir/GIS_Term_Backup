@@ -9,7 +9,7 @@
         <script src="https://code.highcharts.com/highcharts.src.js"></script>
         <meta charset="UTF-8">
         <link rel = "stylesheet" type="text/css" href="../css/index.css">
-        <script src="../javascript/actions.js"></script>
+        <script src="../javascript/dynamics.js"></script>
 
         <title>GIS Term Project</title>
     </head>
@@ -31,13 +31,70 @@
                 <div class="collapse navbar-collapse" id="myNav">
                     <ul class="nav navbar-nav">
                         <li><a href="#submission">Data Form</a></li>
-                        <li><a href="#tweet">Tweet Results</a></li>
+                        <li><a href="#tweets">Tweet Results</a></li>
                         <li><a href="compareTwo.html">Compare Two</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
+
+    <div class="container" style="width: 100%">
+
+        <div id="jumbo" class="jumbotron" style="text-align: center">
+
+            <h1>GIS Term Project</h1>
+            <h2>Dynamic Twitter Results Prototype</h2>
+
+        </div>
+
+        <form  method="GET" id="submission">
+            <div class="form-group">
+                <label for="region">Region</label>
+                <input type="search" class="form-control" id="region" name="region" placeholder="South">
+            </div>
+
+            <div class="form-group">
+                <label for="hashtag">Hashtag</label>
+                <input type="search" class="form-control" id="hashtag" name="hashtag" placeholder="#godawgs">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="search" class="form-control" id="category" name="category" placeholder="Politics, Sports, Entertainment, Animals">
+            </div>
+
+
+
+            <div class="form-group" style="display:none;">
+                <label for="hidden">Extra:</label>
+                <input type="text" class="form-control" id="hidden" name="maxResults" placeholder="0 to 50">
+            </div>
+            <button type="submit" id="submitButton" value="Submit" onclick="buttonClick()">Submit</button>
+        </form>
+
+        <hr>
+        <div class="row" id="Sentiment-Analysis" style="width: 100%; height: 500px">
+            <div id="left-graph" class="col-lg-6" style="width: 50%; height: 500px" >
+
+            </div>
+            <div id="right-graph" class="col-lg-6" style="width: 50%; height: 500px">
+
+            </div>
+        </div>
+        <hr>
+        <h1 style="text-align: center">Tweet Results</h1>
+        <div style="width: 100%;height: 100%; padding: 5%" id="tweets">
+
+        </div>
+
+        <div id="test">
+
+        </div>
+
+    </div>
+
+
 
     </body>
 </html>

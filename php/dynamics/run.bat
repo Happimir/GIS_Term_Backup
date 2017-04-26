@@ -1,0 +1,1 @@
+node C:xampp\htdocs\GIS\\IS_Fixed_Term\botCode\sentiment.js
